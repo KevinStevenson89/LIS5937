@@ -1,0 +1,12 @@
+Package: Alzgenes
+Title: Analyzes the Relationship of biomarker genes APOE/APOC1 and Alzheimers Disease  
+Version: 0.0.0.9000
+Authors@R: person("Kevin", "Stevenson", email = "kevin71@mail.usf.edu", role = c("aut", "cre"))
+Description: An implementation of the apoeapoc dataset in R. It analyzes the APOE/APOC1 two allele variants
+    and their function as a indicator to the presence/absence of Alzheimer's Disease. The age and sex of the 
+    patients are also used as a predictor for Alzheimers Disease. Various types of data visualization are 
+    utilized to allow for clear graphical presentation of the clinical predictors of Alzheimers Disease.  
+Depends: R (>= 3.5.2), gap, ggplot2
+License: CC0
+Encoding: UTF-8
+LazyData: true
