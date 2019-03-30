@@ -1,0 +1,40 @@
+---
+title: "Module 12"
+author: "Kevin Stevenson"
+date: "March 29, 2019"
+output: word_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+To run this example rmarkdown file, make sure to place it in a folder where you have downloaded the US population dataset ("USPop.csv")
+
+```{r load_USPop_data}
+# Load the ggplot2 and lattice packages
+library(ggplot2)
+library(lattice)
+
+# read USPop data if you have not already
+USpop <- read.csv(file = "C:/LIS5937_R_files/USPop.csv")
+
+```
+
+## Including Plots
+
+Embeded plots
+
+```{r plot, echo=FALSE}
+#produces a pie chart of the US population by year
+x <- pie(USpop$population, main = "Population", labels = USpop$year)
+
+#produces a histogram of the US population data
+histogram(~ year, data = USpop)
+#produces a scatter plot of the US population data
+ggplot(USpop, aes(year, population)) + geom_point() 
+```
+
+
